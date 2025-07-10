@@ -12,3 +12,7 @@ export const saveContact = (Contact: Contact) => {
     contactList.push(Contact);
     return Contact;
 }
+
+export const getContact = (id: number): Contact | undefined => {
+    return contactList.find(contact => contact.id === id);
+}

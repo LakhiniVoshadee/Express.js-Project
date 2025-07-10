@@ -23,3 +23,17 @@ export const saveContact = (req: Request, res: Response) => {
         res.status(500).json({error: 'Something went wrong'});
     }
 }
+
+export const getContact = (req: Request, res: Response) => {
+    const contactId = parseInt(req.params.id);
+    if(isNaN(contactId)){
+        res.status(400).json({error: 'Invalid contact id'});
+        return;
+    }
+    const contact = contactService.getContact(contactId);
+    if (!contact) {
+        res.status(404).json({error: 'Contact not found'});
+        return;
+    }
+    res.status(200).json(contact);
+}

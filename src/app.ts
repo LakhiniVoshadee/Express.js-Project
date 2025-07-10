@@ -2,6 +2,7 @@
 import express, {Express} from "express";
 import productRoutes from "./routes/product.routes";
 import cors from "cors";
+import contactRoutes from "./routes/contact.routes";
 
 
 const app: Express = express();
@@ -30,12 +31,12 @@ const corsOptions = {
 
     }
 
-
 }
 app.use(cors());
 
 
 app.use("/api/products", productRoutes)
+app.use("/api/contacts ", contactRoutes)
 
 
 // 3.Define simple get request

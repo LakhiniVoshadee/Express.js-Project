@@ -16,3 +16,10 @@ export const saveContact = (Contact: Contact) => {
 export const getContact = (id: number): Contact | undefined => {
     return contactList.find(contact => contact.id === id);
 }
+
+export const validateContact = (Contact: Contact) => {
+    if (!Contact.id || !Contact.name || !Contact.phone || !Contact.email || !Contact.subject || !Contact.message) {
+        return 'All fields are required';
+    }
+    return null;
+}

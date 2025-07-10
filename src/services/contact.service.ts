@@ -4,3 +4,6 @@ import {Contact} from "../model/contact.model";
 
 // Get all contacts service logic
 
+export const getAllContacts = (): Contact[] => {
+    return contactList;
+}

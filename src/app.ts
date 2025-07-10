@@ -36,7 +36,7 @@ app.use(cors());
 
 
 app.use("/api/products", productRoutes)
-app.use("/api/contacts ", contactRoutes)
+app.use("/api/contacts", contactRoutes)
 
 
 // 3.Define simple get request

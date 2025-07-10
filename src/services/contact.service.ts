@@ -7,3 +7,8 @@ import {Contact} from "../model/contact.model";
 export const getAllContacts = (): Contact[] => {
     return contactList;
 }
+
+export const saveContact = (Contact: Contact) => {
+    contactList.push(Contact);
+    return Contact;
+}

@@ -1,3 +1,4 @@
+/*
 export interface Product {
     id: number,
     name: string,
@@ -7,3 +8,37 @@ export interface Product {
 }
 
 
+*/
+
+import mongoose  from "mongoose";
+
+const productModel = new mongoose.Schema(
+    {
+        "id" : {
+            required: true,
+            type: Number,
+            unique: true, // for better performance
+        },
+        "name" : {
+            required: true,
+            type: String,
+            unique: true, // for better performance
+        },
+        "price" : {
+            required: true,
+            type: Number,
+        },
+        "currency" : {
+            required: true,
+            type: String,
+        },
+        "image" : {
+            required: true,
+            type: String,
+        }
+    }
+);
+
+const Product = mongoose.model('Product', productModel);
+
+export default Product

@@ -13,7 +13,7 @@ This repository contains a project built using [Express.js](https://expressjs.co
 - **API Development**: Support for RESTful API development.
 
 ## API Documentation
-- **Postman Collection**: [Perfume-backend API Collection](https://www.postman.com/workspace/My-Workspace~1da884a4-bcf4-4a9b-81ae-de4a654663da/collection/37709954-3c63ff19-d25f-41bb-ba8f-7cc7ad7a24f6?action=share&creator=37709954)
+- **Postman Collection**: [Perfume-backend API Collection](./RAD-perfume-shop-backend.postman_collection.json)
 
 ## Prerequisites
 
